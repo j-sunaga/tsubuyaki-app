@@ -1,0 +1,2 @@
+class TsubuyakiesController < ApplicationController
+end

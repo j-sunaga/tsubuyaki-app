@@ -1,0 +1,2 @@
+module TsubuyakiesHelper
+end
