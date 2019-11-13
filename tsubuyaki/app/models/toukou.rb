@@ -1,0 +1,2 @@
+class Toukou < ApplicationRecord
+end
