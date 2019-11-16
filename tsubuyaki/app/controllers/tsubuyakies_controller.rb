@@ -23,6 +23,18 @@ class TsubuyakiesController < ApplicationController
       end
   end
 
+  def edit
+  end
+
+  def update
+      if @tsubuyaki.update(tsubuyaki_params)
+        redirect_to tsubuyakies_path, notice: "つぶやきを編集しました！"
+      else
+        render :edit
+      end
+    end
+  #
+
   private
 
   def tsubuyaki_params
