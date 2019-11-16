@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Tsubuyaki</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +12,20 @@
   </head>
 
   <body>
+    <header>
+      <ul>
+        <div class="header-left">
+          <li class="left"><a href="#">つぶやき一覧</a></li>
+          <li class="left"><a href="#">つぶやく</a></li>
+        </div>
+      </ul>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <p>つぶやき株式会社</p>
+      <p>©2019 Copyright Tsubuyaki Goro Corp.</p>
+    </footer>
   </body>
 </html>
