@@ -48,14 +48,14 @@ header li {
   overflow-x: hidden;
 }
 
-.main h2{
-  padding-left: 50px;
+.container{
+  padding: 30px 30px;
 }
+
 
 .tweet{
   width: 100%;
   table-layout: fixed;
-  padding-left: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -65,16 +65,8 @@ header li {
   text-align: center;
 }
 
-.new_link{
-  padding-left: 50px;
-}
 
 /* 新規登録画面の実装 */
-.input_form{
-  padding: 30px 30px;
-
-}
-
 .submit_btn{
   margin: 20px 0px;
 }
