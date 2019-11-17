@@ -8,9 +8,9 @@
     <% @tsubuyakies.each {|tsubuyaki| %>
       <tr>
         <td class="main_row"><%= tsubuyaki.content %></td>
-        <td class="link_row"><%= link_to '詳細を確認する', tsubuyaky_path(tsubuyaki.id) %></td>
-        <td class="link_row"><%= link_to 'ブログを編集する', edit_tsubuyaky_path(tsubuyaki.id),data: { confirm: '本当に編集していいですか？' }  %></td>
-        <td class="link_row"><%= link_to 'ブログを削除する', tsubuyaky_path(tsubuyaki.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+        <td class="link_row"><%= link_to '詳細', tsubuyaky_path(tsubuyaki.id) %></td>
+        <td class="link_row"><%= link_to '編集', edit_tsubuyaky_path(tsubuyaki.id),data: { confirm: '本当に編集していいですか？' }  %></td>
+        <td class="link_row"><%= link_to '削除', tsubuyaky_path(tsubuyaki.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
       </tr>
     <% } %>
     </table>
