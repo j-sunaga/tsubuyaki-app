@@ -40,6 +40,11 @@ class TsubuyakiesController < ApplicationController
        redirect_to tsubuyakies_path, notice:"つぶやきを削除しました！"
     end
 
+    #登録前に確認する
+    def confirm
+      @tsubuyaki = Toukou.new(tsubuyaki_params)
+      render :new if @tsubuyaki.invalid?
+    end
 
   private
 
