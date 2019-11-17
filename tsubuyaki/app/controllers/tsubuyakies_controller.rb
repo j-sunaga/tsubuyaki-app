@@ -33,7 +33,13 @@ class TsubuyakiesController < ApplicationController
         render :edit
       end
     end
-  #
+
+    #削除機能
+    def destroy
+      @tsubuyaki.destroy
+       redirect_to tsubuyakies_path, notice:"つぶやきを削除しました！"
+    end
+
 
   private
 
