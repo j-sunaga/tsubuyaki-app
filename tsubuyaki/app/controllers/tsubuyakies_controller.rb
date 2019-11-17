@@ -14,18 +14,24 @@ class TsubuyakiesController < ApplicationController
   def show
   end
 
+
   def create
     @tsubuyaki = Toukou.new(tsubuyaki_params)
-      if @tsubuyaki.save
-        redirect_to tsubuyakies_path, notice: "つぶやきました！"
+      if params[:back]
+        render :new
       else
-        render action: :new
+        if @tsubuyaki.save
+          redirect_to tsubuyakies_path, notice: "つぶやきました！"
+        else
+          render action: :new
+        end
       end
   end
 
   def edit
   end
 
+  #アップデートアクション
   def update
       if @tsubuyaki.update(tsubuyaki_params)
         redirect_to tsubuyakies_path, notice: "つぶやきを編集しました！"
@@ -55,5 +61,6 @@ class TsubuyakiesController < ApplicationController
   def set_tsubuyaki
    @tsubuyaki = Toukou.find(params[:id])
   end
+
 
 end
