@@ -1,32 +1,9 @@
-
 <div class="main">
   <div class="container">
-<%= form_with(model: @tsubuyaki, local:true, url: choose_new_or_edit) do |form| %>
-  <% if @tsubuyaki.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @tsubuyaki.errors.count %>件のエラーがあります。</h2>
-      <ul>
 
-      <% @tsubuyaki.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <h2>つぶやく</h2>
 
-  <div class="tsubuyaki_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= render 'form' %>
+
   </div>
-  <div class="submit_btn">
-  <%= form.submit%>
-  </div>
-  <% end %>
-
-  <div class="back_index">
-  <%= link_to "つぶやき一覧画面にもどる", tsubuyakies_path %>
-  </div>
-
-</div>
-
 </div>
