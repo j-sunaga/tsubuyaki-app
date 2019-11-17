@@ -1,6 +1,6 @@
 <div class="main">
   <div class="container">
-<%= form_with(model: @tsubuyaki, local:true, url: tsubuyaky_path) do |form| %>
+<%= form_with(model: @tsubuyaki, local:true, url: choose_new_or_edit) do |form| %>
   <% if @tsubuyaki.errors.any? %>
     <div id="error_explanation">
       <h2><%= @tsubuyaki.errors.count %>件のエラーがあります。</h2>
