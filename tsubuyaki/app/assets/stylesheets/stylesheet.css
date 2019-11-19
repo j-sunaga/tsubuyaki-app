@@ -1,32 +1,82 @@
 html {
-  position: relative;
-  min-height: 100%;
+  /* 10px */
+  font-size: 62.5%;
 }
 
 body {
-  text-align: left;
+  color: #615D6C;
+  /* 12px */
+  font-size: 1.2rem;
+  padding-top: 60px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 /* header部分の実装 */
 
-header {
-  background-color: #1da1f2;
-  border: solid 1px #1da1f2;
-  top: 0px;                   /* 位置(上0px) */
-  left: 0px;                  /* 位置(右0px) */
+.header {
+  background-color: #95d3f9;
+  border: solid 1px #95d3f9;
   width: 100%;
-  height: 50px;
+  min-height: 50px;
+  margin-bottom: 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.header-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: 1px;
+}
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 2.0rem;
+    line-height: 4.0rem;
+    color: #615D6C;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul{
-  list-style: none;
+ list-style-type: none;
+ margin: 0;
 }
 
-header ul .left{
+.global-nav{
+  float: right;
+  margin: 0;
+  margin-right: -15px;
+}
+
+
+.global-nav li {
   float: left;
 }
 
-header ul a {
+.global-nav a{
+    color: #615D6C;
+    line-height: 20px;
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: bold;
+
+}
   text-decoration: none;
   color: white;
 }
@@ -75,18 +125,25 @@ header li {
 
 /* footer部分の実装 */
 footer {
-  background-color: #1da1f2;
-  border: solid 1px #1da1f2;
+  background-color: #95d3f9;
+  border: solid 1px #95d3f9;
   padding-top: 5px;
   padding-left: 50px;
   color: white;
   width: 100%;
   height: 52px;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  position: fixed;
+  bottom: 0;
 }
 
 footer p{
+  font-size: 10px;
   margin: 0px;
 * footer部分の実装 */
+}
+
+.clearfix ::after{
+  content: '';
+  display: block;
+  clear: both;
 }

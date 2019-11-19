@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Tsubuyaki</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,20 +11,25 @@
   </head>
 
   <body>
-    <header>
-      <ul>
-        <div class="header-left">
-          <li class="left"><a href="#">つぶやき一覧</a></li>
-          <li class="left"><a href="#">つぶやく</a></li>
-        </div>
-      </ul>
+    <header class ="header clearfix">
+      <div class="header-container">
+      <a id="logo" href="/tsubuyakies">つぶやきアプリ</a>
+      <nav class="global-nav">
+        <ul>
+          <li><%= link_to "つぶやく", new_tsubuyaky_path %></li>
+          <li><%= link_to "つぶやき一覧", tsubuyakies_path %></li>
+        </ul>
+      </nav>
+      </div>
     </header>
 
     <%= yield %>
 
+    
     <footer>
       <p>つぶやき株式会社</p>
       <p>©2019 Copyright Tsubuyaki Goro Corp.</p>
+      <p><a href="https://pixabay.com/ja/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48563">Clker-Free-Vector-Images</a>による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48563">Pixabay</a>からの画像</p>
     </footer>
   </body>
 </html>
