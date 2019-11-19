@@ -19,20 +19,22 @@
     </div>
 
     <div class="main">
-    <h2>つぶやき一覧</h2>
+    <h3>つぶやき一覧</h3>
     <p><%= notice %></p>
 
     <!-- つぶやき一覧を表示する -->
-    <table class = "tweet">
+    <ul class = "tweets">
     <% @tsubuyakies.each {|tsubuyaki| %>
-      <tr>
-        <td class="main_row"><%= tsubuyaki.content %></td>
-        <td class="link_row"><%= link_to '詳細', tsubuyaky_path(tsubuyaki.id) %></td>
-        <td class="link_row"><%= link_to '編集', edit_tsubuyaky_path(tsubuyaki.id),data: { confirm: '本当に編集していいですか？' }  %></td>
-        <td class="link_row"><%= link_to '削除', tsubuyaky_path(tsubuyaki.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-      </tr>
+        <li class="tweet">
+          <%= image_tag('profile.jpg') %>
+          <span><%= tsubuyaki.content %></span>
+          <span><%= tsubuyaki.created_at %></span>
+          <%= link_to '詳細', tsubuyaky_path(tsubuyaki.id) %>
+          <%= link_to '編集', edit_tsubuyaky_path(tsubuyaki.id),data: { confirm: '本当に編集していいですか？' }  %>
+          <%= link_to '削除', tsubuyaky_path(tsubuyaki.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %>
+        </li>
     <% } %>
-    </table>
+    </ul>
 
     <!-- 新規ツイート画面へのリンク -->
     <div class="new_link"><%= link_to '新規作成画面', new_tsubuyaky_path %></div>
