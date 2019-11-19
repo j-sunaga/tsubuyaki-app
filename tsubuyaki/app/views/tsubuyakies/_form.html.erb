@@ -13,11 +13,10 @@
   <% end %>
 
   <div class="tsubuyaki_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content %>
   </div>
   <div class="submit_btn">
-  <%= form.submit%>
+  <%= form.submit "POST"%>
   </div>
   <% end %>
 
