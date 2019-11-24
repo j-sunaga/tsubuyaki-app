@@ -1,8 +1,8 @@
-<div class="main">
-  <div class="container">
-    <h2>つぶやき詳細画面</h2>
-    <p>つぶやき: <%= @tsubuyaki.content %></p>
-    <p>投稿日: <%= @tsubuyaki.created_at %></p>
-    <%= link_to "つぶやき一覧画面にもどる", tsubuyakies_path %>
-  </div>
+<div class="wrapper clearfix">
+    <div class="detail-container">
+      <h2>つぶやき詳細画面</h2>
+      <p>つぶやき: <%= @tsubuyaki.content %></p>
+      <p>投稿日: <%= @tsubuyaki.created_at %></p>
+      <%= link_to "つぶやき一覧画面にもどる", tsubuyakies_path %>
+    </div>
 </div>

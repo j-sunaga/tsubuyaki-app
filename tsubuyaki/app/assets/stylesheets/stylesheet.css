@@ -228,6 +228,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   font-size: 1.4rem;
 }
 
+/* 詳細画面の実装 */
+.detail-container{
+  width: 100%;
+  text-align: center;
+}
+
+.detail-container p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
 
 
 /* footer部分の実装 */
