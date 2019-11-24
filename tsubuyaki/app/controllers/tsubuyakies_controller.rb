@@ -4,7 +4,7 @@ class TsubuyakiesController < ApplicationController
 
   # つぶやき一覧を表示するアクション
   def index
-    @tsubuyakies = Toukou.all.order(:created_at)
+    @tsubuyakies = Toukou.all.order(created_at: "DESC")
     @tsubuyaki = Toukou.new
   end
 
