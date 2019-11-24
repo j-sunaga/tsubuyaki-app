@@ -229,12 +229,12 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 /* 詳細画面の実装 */
-.detail-container{
+.sub-container{
   width: 100%;
   text-align: center;
 }
 
-.detail-container p{
+.sub-container p{
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 1.6rem;
