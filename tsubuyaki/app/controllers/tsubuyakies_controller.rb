@@ -19,12 +19,14 @@ class TsubuyakiesController < ApplicationController
   def create
     @tsubuyaki = Toukou.new(tsubuyaki_params)
       if params[:back]
-        render :new
+        @tsubuyakies = Toukou.all.order(created_at: "DESC")
+        render :index
       else
         if @tsubuyaki.save
           redirect_to tsubuyakies_path, notice: "つぶやきました！"
         else
-          render action: :new
+          @tsubuyakies = Toukou.all.order(created_at: "DESC")
+          render action: :index
         end
       end
   end
@@ -50,7 +52,10 @@ class TsubuyakiesController < ApplicationController
     #登録前に確認する
     def confirm
       @tsubuyaki = Toukou.new(tsubuyaki_params)
-      render :new if @tsubuyaki.invalid?
+      if @tsubuyaki.invalid? then
+        @tsubuyakies = Toukou.all.order(created_at: "DESC")
+        render :index
+      end
     end
 
   private
