@@ -53,6 +53,7 @@ a {
 ul{
  list-style-type: none;
  margin: 0;
+ padding-inline-start: 10px;
 }
 
 .global-nav{
