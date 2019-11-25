@@ -258,6 +258,19 @@ h1, .h1, h2, .h2, h3, .h3 {
   font-size: 1.6rem;
 }
 
+/* プロフィール部分の実装 */
+.profile_info img{
+  width: 100px;
+  height: 100px;
+}
+
+.profile_info ul li{
+  font-size: 1.3rem;
+  margin: 10px 0px;
+}
+
+
+
 /* footer部分の実装 */
 footer {
   background-color: #95d3f9;

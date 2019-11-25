@@ -58,6 +58,9 @@ class TsubuyakiesController < ApplicationController
       end
     end
 
+    def profile
+    end
+
   private
 
   def tsubuyaki_params
