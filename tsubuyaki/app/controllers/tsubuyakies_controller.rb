@@ -1,32 +1,33 @@
 class TsubuyakiesController < ApplicationController
   before_action :set_tsubuyaki, only: [:show, :edit, :update,:destroy]
 
-
   # つぶやき一覧を表示するアクション
   def index
     @tsubuyakies = Toukou.all.order(created_at: "DESC")
     @tsubuyaki = Toukou.new
   end
 
+  # つぶやきの詳細を確認するアクション
   def show
   end
 
-
+  # つぶやきを登録するアクション
   def create
     @tsubuyaki = Toukou.new(tsubuyaki_params)
-      if params[:back]
-        @tsubuyakies = Toukou.all.order(created_at: "DESC")
-        render :index
+    if params[:back]
+      @tsubuyakies = Toukou.all.order(created_at: "DESC")
+      render :index
+    else
+      if @tsubuyaki.save
+        redirect_to tsubuyakies_path, notice: "つぶやきました！"
       else
-        if @tsubuyaki.save
-          redirect_to tsubuyakies_path, notice: "つぶやきました！"
-        else
-          @tsubuyakies = Toukou.all.order(created_at: "DESC")
-          render action: :index
-        end
+        @tsubuyakies = Toukou.all.order(created_at: "DESC")
+        render action: :index
       end
+    end
   end
 
+  # つぶやき内容を編集するアクション
   def edit
   end
 
@@ -42,10 +43,10 @@ class TsubuyakiesController < ApplicationController
     #削除機能
     def destroy
       @tsubuyaki.destroy
-       redirect_to tsubuyakies_path, notice:"つぶやきを削除しました！"
+      redirect_to tsubuyakies_path, notice:"つぶやきを削除しました！"
     end
 
-    #登録前に確認する
+    #登録前に確認するアクション
     def confirm
       @tsubuyaki = Toukou.new(tsubuyaki_params)
       if @tsubuyaki.invalid? then
@@ -54,6 +55,7 @@ class TsubuyakiesController < ApplicationController
       end
     end
 
+    # プロフィールページへのアクション
     def profile
     end
 
@@ -66,6 +68,5 @@ class TsubuyakiesController < ApplicationController
   def set_tsubuyaki
    @tsubuyaki = Toukou.find(params[:id])
   end
-
 
 end

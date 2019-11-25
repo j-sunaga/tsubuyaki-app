@@ -1,3 +1,4 @@
+<!-- 共通レイアウト画面 -->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -5,29 +6,31 @@
     <title>Tsubuyaki</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- ヘッダー -->
     <header class ="header clearfix">
       <div class="header-container">
-      <a id="logo" href="/tsubuyakies">つぶやきアプリ</a>
-      <nav class="global-nav">
-        <ul>
-          <li><a href="/tsubuyakies/profile">プロフィール</a></li>
-        </ul>
-      </nav>
+        <a id="logo" href="/tsubuyakies">つぶやきアプリ</a>
+        <nav class="global-nav">
+          <ul>
+            <li><a href="/tsubuyakies/profile">プロフィール</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
+    <!-- 本文 -->
     <%= yield %>
 
+    <!-- フッター -->
     <footer>
       <div class="footer-content">
-      <p>つぶやき株式会社</p>
-      <p>©2019 Copyright Tsubuyaki Corp.</p>
+        <p>つぶやき株式会社</p>
+        <p>©2019 Copyright Tsubuyaki Corp.</p>
       </div>
     </footer>
   </body>

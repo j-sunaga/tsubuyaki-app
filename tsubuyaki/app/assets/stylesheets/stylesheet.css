@@ -258,7 +258,6 @@ footer {
   border: solid 1px #95d3f9;
   padding-top: 5px;
   padding-left: 50px;
-  color: white;
   width: 100%;
   height: 52px;
   position: fixed;
@@ -268,7 +267,6 @@ footer {
 .footer-content{
   position: relative;
   top: 15px;
-
 }
 
 footer p{

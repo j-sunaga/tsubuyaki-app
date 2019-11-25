@@ -1,3 +1,4 @@
+<!-- つぶやきトップページ -->
 <div class="wrapper clearfix">
   <div class="sidemenu">
     <section class="user-info">
@@ -7,34 +8,31 @@
     </section>
     <section>
       <div class="stat">
-      <span>50 Following</span>
-      <span>100 Followers</span>
+        <span>50 Following</span>
+        <span>100 Followers</span>
       </div>
     </section>
     <section class="micro-post">
       <%= render 'form' %>
     </section>
-
-
-    </div>
-
-    <div class="main">
+  </div>
+  <div class="main">
     <h3>つぶやき一覧</h3>
     <p><%= notice %></p>
-
     <!-- つぶやき一覧を表示する -->
     <ul class = "tweets">
     <% @tsubuyakies.each {|tsubuyaki| %>
-        <li class="tweet">
-          <div class="tweet-content">
+      <li class="tweet">
+        <div class="tweet-content">
           <%= image_tag('profile.jpg') %>
           <span class="tweet-tsubuyaki"><%= tsubuyaki.content %></span>
           <span class="create_date"><%= tsubuyaki.created_at %></span>
           <%= link_to '詳細', tsubuyaky_path(tsubuyaki.id) %>
           <%= link_to '編集', edit_tsubuyaky_path(tsubuyaki.id),data: { confirm: '本当に編集していいですか？' }  %>
           <%= link_to '削除', tsubuyaky_path(tsubuyaki.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %>
-          </div>
-        </li>
+        </div>
+      </li>
     <% } %>
     </ul>
   </div>
+</div>
