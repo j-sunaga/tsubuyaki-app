@@ -1,14 +1,14 @@
-<div class="main">
-  <div class="container">
+<div class="wrapper clearfix">
+  <div class="sub-container">
     <h2>以下の内容で、送信する。</h2>
 
     <%= form_with(model: @tsubuyaki, url: tsubuyakies_path, local: true) do |form| %>
       <%= form.hidden_field :content %>
 
       <p>つぶやき:<%= @tsubuyaki.content %></p>
-    <%= form.submit  "登録する" %>
+      <p><%= form.submit  "登録する" %></p>
 
-    <%= form.submit "戻る", name: 'back' %>
+      <p><%= form.submit "戻る", name: 'back' %></p>
     <% end %>
 
 </div>
