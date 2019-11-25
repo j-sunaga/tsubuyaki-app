@@ -284,8 +284,15 @@ footer {
   bottom: 0;
 }
 
+.footer-content{
+  position: relative;
+  top: 15px;
+
+}
+
 footer p{
   font-size: 10px;
+  color: #615D6C;
   margin: 0px;
 * footer部分の実装 */
 }
