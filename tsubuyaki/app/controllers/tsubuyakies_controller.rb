@@ -8,10 +8,6 @@ class TsubuyakiesController < ApplicationController
     @tsubuyaki = Toukou.new
   end
 
-  def new
-    @tsubuyaki = Toukou.new
-  end
-
   def show
   end
 
