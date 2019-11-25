@@ -1,16 +1,13 @@
 html {
-  /* 10px */
-  font-size: 62.5%;
+  font-size: 62.5%;/* 10px */
 }
 
 body {
   color: #615D6C;
-  /* 12px */
-  font-size: 1.2rem;
+  font-size: 1.2rem;/* 12px */
   padding-top: 60px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 /* header部分の実装 */
 .header {
@@ -36,12 +33,9 @@ body {
 
 #logo {
     float: left;
-    margin-right: 10px;
     font-size: 2.0rem;
     line-height: 4.0rem;
     color: #615D6C;
-    text-transform: uppercase;
-    letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
 }
@@ -51,17 +45,15 @@ a {
 }
 
 ul{
- list-style-type: none;
- margin: 0;
- padding-inline-start: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding-inline-start: 10px;
 }
 
 .global-nav{
   float: right;
-  margin: 0;
   margin-right: -15px;
 }
-
 
 .global-nav li {
   float: left;
@@ -96,13 +88,11 @@ ul{
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
-
 }
 
 .user-info{
   margin-top: 20px;
   padding-bottom: 10px;
-  overflow: auto;
 }
 
 .user-info img{
@@ -110,7 +100,6 @@ ul{
   height: 50px;
   float: left;
   margin-right: 10px;
-  overflow: auto;
 }
 
 .user-info h2{
@@ -124,11 +113,9 @@ ul{
   padding-top: 10px;
   padding-bottom: 10px;
   height: 20px;
-  overflow: auto;
 }
 
 .stat span{
-  text-decoration: none;
   float: left;
   padding-right: 10px;
   font-size: 1.4rem;
@@ -143,14 +130,14 @@ ul{
 }
 
 textarea{
-    height: 100px;
-    margin-bottom: 10px;
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .submit_btn{
@@ -165,19 +152,17 @@ input{
   border-color: #2e6da4;
 }
 
-
-
 /* 一覧表示画面*/
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
+h2, h3{
+  line-height: 1;
 }
 
 h3, .h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
-h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+h2, .h2, h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .microposts {
@@ -209,7 +194,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   border: solid 0.5px gray;
   vertical-align: middle;
   position: relative;
-
 }
 
 .tweet-content{
@@ -223,7 +207,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   display: inline-block;
   float: left;
   margin-right: 5px;
-  text-decoration: none;
 }
 
 .tweet-content img{
@@ -269,8 +252,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   margin: 10px 0px;
 }
 
-
-
 /* footer部分の実装 */
 footer {
   background-color: #95d3f9;
@@ -294,7 +275,6 @@ footer p{
   font-size: 10px;
   color: #615D6C;
   margin: 0px;
-* footer部分の実装 */
 }
 
 .clearfix ::after{
